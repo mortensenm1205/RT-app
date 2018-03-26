@@ -1,17 +1,23 @@
 var movieData = require('../config/rt.js');
+var fs = require('fs');
 
-movieData.getMoviesCurrentlyInTheaters()
-    .then((response) => {
-      let results = response.data.results;
-      results.forEach((movieData) => {
-        let movie = {
-          title: movieData.title,
-          overview: movieData.overview
-        };
-        console.log(movie);
-      });
-
+function setUpCurrentMovies() {
+  movieData.getMoviesCurrentlyInTheaters()
+  .then((response) => {
+    var results = response.data.results;
+    fs.writeFile('./server/config/currentMovies.json', results, (err) => {
+      if(err) throw err;
+      console.log('This worked');
     })
-    .catch((error) => {
-      console.log(error);
-    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
+setUpCurrentMovies();
+
+module.exports = {
+
+
+}
