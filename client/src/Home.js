@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,12 +22,13 @@ class App extends Component {
     const { data } = this.state;
     return (
       <div>
-        {data.map((data) => {
+        {data.map((apiData) => {
           return (
             <div>
-              <h1>{data.title}</h1>
-              <p>{data.overview}</p>
-            </div>  
+              <h4>{apiData.title}</h4>
+              <p>Overview: {apiData.overview}</p>
+              <p>Popularity: {apiData.popularity}</p>
+            </div>
           )
         })}
       </div>
@@ -36,4 +37,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Home;
