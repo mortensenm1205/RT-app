@@ -8,7 +8,7 @@ class RT extends Component {
     return (
       <div>
         <Route exact path='/' component={MovieList} />
-        <Route path='/user' component={MovieCard} />
+        <Route path='/:movieId' component={MovieCard} />
       </div>
     )
   }

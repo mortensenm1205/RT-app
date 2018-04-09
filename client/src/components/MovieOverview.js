@@ -12,7 +12,7 @@ class MovieOverview extends Component {
         {data.map((apiData) => {
           return (
             <div key={apiData.id}>
-              <Link to='/user'>
+              <Link to={'/' + apiData.id}>
                 <h3>{apiData.title}</h3>
               </Link>
               <p>Overview: {apiData.overview}</p>
