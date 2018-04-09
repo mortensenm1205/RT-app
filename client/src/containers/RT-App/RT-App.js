@@ -6,9 +6,7 @@ class RT extends Component {
   render() {
     return (
       <div>
-        <div>
-          <MovieList />
-        </div>
+        <Route exact path='/' component={MovieList} />
         <Route path='/user' render={() => <h2>Hllo</h2>} />
       </div>
     )

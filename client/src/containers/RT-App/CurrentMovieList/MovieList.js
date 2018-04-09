@@ -11,7 +11,7 @@ class MovieList extends Component {
   }
 
   componentDidMount() {
-    fetch('/home', {
+    fetch('/currentMovieData', {
       headers : {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

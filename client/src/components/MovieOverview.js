@@ -9,9 +9,9 @@ class MovieOverview extends Component {
 
     return (
       <div>
-        {data.map((apiData) => {
+        {data.map((apiData, key) => {
           return (
-            <div>
+            <div key={key}>
               <Link to='/user'>
                 <h3>{apiData.title}</h3>
               </Link>
