@@ -21,6 +21,10 @@ module.exports = {
 
   getMoviesCurrentlyInTheaters() {
     return axios.get(urlToMoviesCurrentlyInTheaters)
+  },
+
+  searchMovieById(movie_id) {
+    return axios.get(`http://api.themoviedb.org/3/movie/${movie_id}${_apiKey}&language=en-US`)
   }
 
 };
