@@ -24,7 +24,7 @@ module.exports = {
   },
 
   searchMovieById(movie_id) {
-    return axios.get(`http://api.themoviedb.org/3/movie/${movie_id}${_apiKey}&language=en-US`)
+    return axios.get(`http://api.themoviedb.org/3/movie${movie_id}${_apiKey}&language=en-US`)
   }
 
 };
