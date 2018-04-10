@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var currentMovieData = require('../controllers/currentMovieData');
+var searchMovieData = require('../controllers/searchMovieData');
 
 /* GET home page. */
 router.get('/', currentMovieData.displayMoviesCurrentlyInTheaters);
 
-router.get('/:testRoute', (req, res, next) => {
-  res.send(req.params.testRoute);
-});
+router.post('/:movieId', searchMovieData.getSearchMovieData);
+
 
 module.exports = router;
