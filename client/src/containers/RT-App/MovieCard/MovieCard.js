@@ -5,7 +5,7 @@ class MovieCard extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { data: [], img: '' };
+    this.state = { data: [] };
   }
 
   componentDidMount() {
@@ -20,21 +20,17 @@ class MovieCard extends Component {
       }
     })
       .then(res => res.json())
-      .then(data => {
-        let img = data.poster_path.split('').splice(1).join('');
-        this.setState({ data, img })
-      })
+      .then(data => this.setState({ data }))
   }
 
   render() {
 
     const { data } = this.state;
-    const { img } = this.state;
 
     return (
       <div>
         <h1>{data.title}</h1>
-        <img src={img} alt={img} />
+        <img src={"http://image.tmdb.org/t/p/w185/" + data.poster_path} alt={data.poster_path} />
         <p>{data.overview}</p>
         <div>Popularity: {data.popularity}</div>
       </div>
