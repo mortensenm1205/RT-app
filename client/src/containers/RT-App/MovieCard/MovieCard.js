@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Rating from '../../../components/RatingSystem';
 
 class MovieCard extends Component {
 
@@ -32,7 +32,7 @@ class MovieCard extends Component {
         <h1>{data.title}</h1>
         <img src={"http://image.tmdb.org/t/p/w185/" + data.poster_path} alt={data.poster_path} />
         <p>{data.overview}</p>
-        <div>Popularity: {data.popularity}</div>
+        <Rating popularity={data.popularity} />
       </div>
     )
   }
