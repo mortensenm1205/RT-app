@@ -7,6 +7,7 @@ class RT extends Component {
   render() {
     return (
       <div>
+        <h1>myRotten Tomatoes</h1>
         <Route exact path='/' component={MovieList} />
         <Route exact path='/:movieId' component={MovieCard} />
       </div>
