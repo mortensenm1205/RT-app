@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import Rating from './RatingSystem';
 
 class MovieOverview extends Component {
 
@@ -16,7 +17,7 @@ class MovieOverview extends Component {
                 <h3>{apiData.title}</h3>
               </Link>
               <p>Overview: {apiData.overview}</p>
-              <p>Popularity: {apiData.popularity}</p>
+              <Rating popularity={apiData.popularity} />
             </div>
           )
         })}
