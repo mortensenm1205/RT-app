@@ -24,7 +24,8 @@ class MovieList extends Component {
   render() {
     return (
       <div>
-          <MovieOverview data={this.state.data}/>
+        <h1>myRotten Tomatoes</h1>
+        <MovieOverview data={this.state.data}/>
       </div>
     );
   }

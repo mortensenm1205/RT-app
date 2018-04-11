@@ -22,7 +22,7 @@ function convertRating(popularity) {
 }
 
 const rating = (props) => {
-  return <p>Popularity: {convertRating(props.popularity)}</p>
+  return <p>Rating: {convertRating(props.popularity)}</p>
 }
 
 export default rating;
